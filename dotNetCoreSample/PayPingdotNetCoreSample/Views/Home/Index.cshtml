@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>PayPing .Net Core Sample</h1>
+<hr>
+
+<div class="form">
+    <form  method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="CreatePay"   onsubmit="return validate()">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input id="payerName" name="payerName" ></td>
+            </tr>
+            <tr>
+                <td>Amount*</td>
+                <td><input id="amount" name="amount" type="number" value="1000" ></td>
+            </tr>
+            <tr>
+                <td>PhoneOrEmail</td>
+                <td><input id="payerIdentity" name="payerIdentity" ></td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td><input id="description" name="description" ></td>
+                <td><input type="submit" value="pay"></td>
+            </tr>
+
+        </table>
+    </form>
+</div>
